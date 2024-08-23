@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prison Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #212529; /* Dark background for the whole page */
+            color: #e9ecef; /* Light text color for contrast */
+        }
+        .navbar {
+            background-color: #343a40; /* Dark navbar */
+        }
+        .navbar-brand, .nav-link {
+            color: #e9ecef !important; /* Light text for navbar items */
+        }
+        .navbar-brand:hover, .nav-link:hover {
+            color: #ffc107 !important; /* Highlight color for hover */
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .card {
+            background-color: #343a40; /* Dark card background */
+            border: 1px solid #495057; /* Dark border color */
+            color: #e9ecef; /* Light text color */
+        }
+        .card-header {
+            background-color: #495057; /* Darker header background */
+        }
+        .btn {
+            font-size: 1rem;
+        }
+        .btn-danger {
+            background-color: #dc3545; /* Dark red background for danger */
+            border: none;
+        }
+        .btn-danger:hover {
+            background-color: #c82333; /* Darker red on hover */
+        }
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Prison Management</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">See Inmates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Near Future Releases</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Manage Cells</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Reports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Settings</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="text-center mb-4">
+            <h1>Welcome to the Prison Management System</h1>
+            <p class="lead">Manage inmates, monitor upcoming releases, and more.</p>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                System Overview
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Inmate Management</h5>
+                <p class="card-text">View and manage details of all inmates.</p>
+                <a href="{{url_for('inmates')}}" class="btn btn-danger">See Inmates</a>
+            </div>
+        </div>
+        <div class="card mt-4">
+            <div class="card-header">
+                Upcoming Releases
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Monitor Release Dates</h5>
+                <p class="card-text">Keep track of inmates scheduled for release soon.</p>
+                <a href="#" class="btn btn-danger">Check Releases</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
