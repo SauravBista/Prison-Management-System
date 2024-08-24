@@ -39,6 +39,8 @@ class InmateForm(FlaskForm):
 
 app.secret_key = "sauravbista"
 
+#routing to different sections
+
 @app.route("/", methods=["GET", "POST"])
 def land():
     form = MyForm()
