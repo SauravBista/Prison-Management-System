@@ -8,41 +8,62 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #212529; /* Dark background for the whole page */
-            color: #e9ecef; /* Light text color for contrast */
+            background-color: #212529; /* Dark theme background */
+            color: #e9ecef; /* Light text for better contrast */
+            font-family: Arial, sans-serif;
         }
         .navbar {
-            background-color: #343a40; /* Dark navbar */
+            background-color: #343a40;
         }
         .navbar-brand, .nav-link {
-            color: #e9ecef !important; /* Light text for navbar items */
+            color: #e9ecef !important;
         }
         .navbar-brand:hover, .nav-link:hover {
-            color: #ffc107 !important; /* Highlight color for hover */
+            color: #ffc107 !important;
         }
         .container {
-            margin-top: 20px;
+            margin-top: 30px;
+        }
+        .header-section {
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .header-section img {
+            height: 120px;
         }
         .card {
-            background-color: #343a40; /* Dark card background */
-            border: 1px solid #495057; /* Dark border color */
-            color: #e9ecef; /* Light text color */
+            background-color: #343a40;
+            border: 1px solid #495057;
+            color: #e9ecef;
+            border-radius: 8px;
         }
         .card-header {
-            background-color: #495057; /* Darker header background */
-        }
-        .btn {
-            font-size: 1rem;
+            background-color: #495057;
+            font-weight: bold;
         }
         .btn-danger {
-            background-color: #dc3545; /* Dark red background for danger */
+            background-color: #dc3545;
             border: none;
         }
         .btn-danger:hover {
-            background-color: #c82333; /* Darker red on hover */
+            background-color: #c82333;
         }
-        .text-center {
+        footer {
+            margin-top: 40px;
             text-align: center;
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 576px) {
+            .header-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header-section img {
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
@@ -74,11 +95,18 @@
     </nav>
 
     <div class="container">
-        <div class="text-center mb-4">
-            <h1>Welcome to the Prison Management System</h1>
-            <p class="lead">Manage inmates, monitor upcoming releases, and more.</p>
+        <!-- Header Section -->
+        <div class="header-section">
+            <img src="../static/img/nepal-emblem.png" alt="Nepal Emblem">
+            <div>
+                <h1>Department Of Prison Management</h1>
+                <h3>Government of Nepal, Ministry of Home Affairs</h3>
+                <h4>Palpa, Nepal</h4>
+            </div>
         </div>
-        <div class="card">
+
+        <!-- Cards Section -->
+        <div class="card mb-4">
             <div class="card-header">
                 System Overview
             </div>
@@ -88,7 +116,7 @@
                 <a href="{{url_for('inmates')}}" class="btn btn-danger">See Inmates</a>
             </div>
         </div>
-        <div class="card mt-4">
+        <div class="card mb-4">
             <div class="card-header">
                 Upcoming Releases
             </div>
@@ -99,6 +127,11 @@
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Department of Prison Management. All Rights Reserved.
+    </footer>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
